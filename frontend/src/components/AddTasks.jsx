@@ -23,7 +23,7 @@ export default function AddTasks({ setTodos, todos }) {
                 />
                 <button
                     onClick={() => {
-                        if (todo.trim() && priority !== "") {
+                        if (todo.trim() && priority !== "" && completeBy !== "") {
                             setTodos([
                                 ...todos,
                                 {
@@ -32,18 +32,20 @@ export default function AddTasks({ setTodos, todos }) {
                                     completeBy,
                                     status: {
                                         completed: false,
-                                        deleted: false,
+                                        // deleted: false,
                                     },
                                 },
                             ]);
                             console.log("todos: ", todos);
                             setTodo("");
+                            setPriority(() => "");
+                            setCompleteBy(() => "");
                         } else {
                             if (!todo.trim())
                                 console.log("todo can't be empty");
                             else
                                 console.log(
-                                    "select the task priority to add a todo."
+                                    "select the priority/complete by to add a todo."
                                 );
                         }
                     }}

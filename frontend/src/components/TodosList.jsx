@@ -16,7 +16,7 @@ export default function TodosList({ todos }) {
             <h1 className="text-violet-500 underline text-2xl md:text-3xl lg:text-4xl font-bold">
                 Todo's List
             </h1>
-            <div>
+            <div className={"flex flex-col gap-9"}>
                 <ParticularDay day={"Today"} todos={todayList} />
                 <ParticularDay day={"Tomorrow"} todos={tomorrowList} />
                 <ParticularDay day={"Someday"} todos={somedayList} />

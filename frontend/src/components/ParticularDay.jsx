@@ -56,12 +56,12 @@ export function ParticularDay({ day, todos }) {
                                         <button
                                             onClick={() => {
                                                 const newTodos = todos.filter(
-                                                    () => {}
+                                                    (todo) => {todo}
                                                 );
                                             }}
                                             className="w-6 h-6 border-4 bg-[#00D26A] p-3 rounded-lg hover:bg-green-900 flex justify-center items-center hover:scale-110 transition-all duration-200"
                                         >
-                                            ✅
+                                            {!todo.status.completed ? <div>✅</div> : <div>Completed</div>}
                                         </button>
                                         <button
                                             onClick={() => {
@@ -69,7 +69,7 @@ export function ParticularDay({ day, todos }) {
                                                     () => {}
                                                 );
                                             }}
-                                            className="w-6 h-6 border-4 bg-red-800 p-3 rounded-lg hover:bg-red-900 flex justify-center items-center hover:scale-110 transition-all duration-200"
+                                            className="w-6 h-6 border-4 bg-red-900 p-3 rounded-lg hover:bg-red-700 flex justify-center items-center hover:scale-110 transition-all duration-200"
                                         >
                                             ❌
                                         </button>
