@@ -13,7 +13,7 @@ export default function TodosList({ todos }) {
     console.log("todoslist (length): ", todos.length);
     return (
         <div className="flex flex-col gap-5 mb-20">
-            <h1 className="text-violet-500 underline text-2xl md:text-3xl lg:text-4xl font-bold">
+            <h1 className="text-[#082866] underline text-2xl md:text-3xl lg:text-4xl font-bold">
                 Todo's List
             </h1>
             <div className={"flex flex-col gap-9"}>

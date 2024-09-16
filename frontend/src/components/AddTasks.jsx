@@ -10,7 +10,7 @@ export default function AddTasks({ setTodos, todos }) {
 
     return (
         <div className="my-10 flex flex-col gap-8">
-            <h1 className="text-violet-500 underline text-2xl md:text-3xl lg:text-4xl font-bold">
+            <h1 className="text-[#082866] underline text-2xl md:text-3xl lg:text-4xl font-bold">
                 Add Tasks
             </h1>
             <div className="flex flex-col gap-2 md:flex-row text-sm md:text-xl lg:text-2xl">
@@ -62,12 +62,12 @@ export default function AddTasks({ setTodos, todos }) {
                     <PriorityButton
                         text={"High"}
                         setPriority={setPriority}
-                        color={"red"}
+                        color={"blue"}
                     />
                     <PriorityButton
                         text={"Medium"}
                         setPriority={setPriority}
-                        color={"green"}
+                        color={"red"}
                     />
                     <PriorityButton
                         text={"Low"}
