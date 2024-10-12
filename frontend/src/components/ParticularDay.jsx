@@ -1,6 +1,6 @@
 import TodoCard from "./TodoCard";
 
-export function ParticularDay({ day, todos }) {
+export function ParticularDay({ day, todos, setTodos }) {
     return (
         <>
             <div className="flex flex-col gap-2">
@@ -54,20 +54,28 @@ export function ParticularDay({ day, todos }) {
                                     </td>
                                     <td className="flex justify-center items-center gap-3">
                                         <button
-                                            onClick={() => {
+                                            onClick={(e) => {
+                                                console.log("todos: ", todos);
                                                 const newTodos = todos.filter(
-                                                    (todo) => {todo}
+                                                    (currTodo) => {
+                                                        return currTodo != todo
+                                                    }
                                                 );
+                                                setTodos(newTodos);
                                             }}
                                             className="w-6 h-6 border-4 bg-[#00D26A] p-3 rounded-lg hover:bg-green-900 flex justify-center items-center hover:scale-110 transition-all duration-200"
                                         >
                                             {!todo.status.completed ? <div>✅</div> : <div>Completed</div>}
                                         </button>
                                         <button
-                                            onClick={() => {
+                                            onClick={(e) => {
+                                                console.log("todos: ", todos);
                                                 const newTodos = todos.filter(
-                                                    () => {}
+                                                    (currTodo) => {
+                                                        return currTodo != todo
+                                                    }
                                                 );
+                                                setTodos(newTodos);
                                             }}
                                             className="w-6 h-6 border-4 bg-red-900 p-3 rounded-lg hover:bg-red-700 flex justify-center items-center hover:scale-110 transition-all duration-200"
                                         >

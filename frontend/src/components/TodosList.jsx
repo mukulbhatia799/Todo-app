@@ -1,7 +1,7 @@
 import { ParticularDay } from "./ParticularDay";
 import { useState } from "react";
 
-export default function TodosList({ todos }) {
+export default function TodosList({ todos, setTodos }) {
     let somedayList=[], todayList=[], tomorrowList=[];
 
     for (let i = 0; i < todos.length; i++) {
@@ -17,9 +17,9 @@ export default function TodosList({ todos }) {
                 Todo's List
             </h1>
             <div className={"flex flex-col gap-9"}>
-                <ParticularDay day={"Today"} todos={todayList} />
-                <ParticularDay day={"Tomorrow"} todos={tomorrowList} />
-                <ParticularDay day={"Someday"} todos={somedayList} />
+                <ParticularDay day={"Today"} todos={todayList} setTodos={setTodos} />
+                <ParticularDay day={"Tomorrow"} todos={tomorrowList} setTodos={setTodos} />
+                <ParticularDay day={"Someday"} todos={somedayList} setTodos={setTodos} />
             </div>
         </div>
     );
